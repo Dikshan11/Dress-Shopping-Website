@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DK Cloths</title>
+  <!-- Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Offer tab -->
+  <nav id="offerTab" style="background-color: #1b1b1b ;"
+    class=" p-1 top-0 flex justify-center items-center shadow-xl gap-20">
+    <h1 class="text-2xl text-white cursor-default">Sign Up and <b>GET 20% OFF</b> for your first Order</h1>
+    <h1 id="close" class="text-2xl text-white cursor-pointer font-bold ">X</h1>
+  </nav>
+
+
+  <!-- Responsive Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-50">
+    <h1 class="text-3xl font-extrabold cursor-pointer"><a href="index.html">DK Cloths</a></h1>
+
+    <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="w-6 h-6 md:hidden">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+
+
+    <ul class="flex gap-24 text-gray-600 hidden md:flex">
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="index.html">New Arrival</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="index.html">Most Wanted</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- side Navbar -->
+  <section id="sidenav" class="bg-white fixed z-20 top-0 transition-all duration-1000"
+    style="width: 50%;height: 100vh;right: -50%;">
+    <div class="text-right p-5">
+      <p id="close-nav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col gap-10 items-center  text-gray-600 md:flex">
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="newarrival.html">New Arrival</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="mostwanted.html">Most Wanted</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+  </section>
+
+  <!-- Header Section -->
+  <section class="px-6">
+    <div class="h-96 mx-auto border rounded overflow-hidden relative">
+      <div id="slider-images" class="flex transition-all duration-500 h-full">
+        <img src="images/poster/banner-2.jpg" class="w-1/2 h-full object-cover opacity-60" />
+        <img src="images/poster/banner-3.jpg" class="w-1/2 h-full object-cover opacity-60" />
+        <img src="images/poster/banner-4.jpg" class="w-1/2 h-full object-cover opacity-60" />
+        <img src="images/poster/banner-1.jpg" class="w-1/2 h-full object-cover opacity-60" />
+        <img src="images/S2.jpg" class="w-1/2 h-full object-cover opacity-60" />
+        <img src="images/S3.jpg" class="w-1/2 h-full object-cover opacity-60" />
+
+      </div>
+      <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+      <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
+        <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold">
+          Level Up Your Style
+        </h1>
+        <h2 class="text-lg sm:text-xl mt-2">With Our Summer Collection</h2>
+        <button class="mt-4 px-5 py-2 flex justify-center gap-5 bg-white text-black rounded text-sm sm:text-base">
+          Shop Now <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class=" w-5 h-5 top-10">
+            <path fill-rule="evenodd"
+              d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+
+        </button>
+      </div>
+      <button id="slide-left" class="absolute top-1/2 left-3 z-20 transform -translate-y-1/2">
+        <img src="images/left-arrow.png" alt="Left" class="w-10 h-10 sm:w-8 sm:h-8" />
+      </button>
+      <button id="slide-right" class="absolute top-1/2 right-3 z-20 transform -translate-y-1/2">
+        <img src="images/right-arrow.png" alt="Right" class="w-10 h-10 sm:w-8 sm:h-8" />
+      </button>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="py-10 px-6">
+    <h2 class="text-2xl font-bold text-left mb-6">Brands</h2>
+    <div class="flex justify-between gap-4 flex-wrap text-center">
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-1.png" alt="Brand 1" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Adidas</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-2.png" alt="Brand 2" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Calvin Klein</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-3.png" alt="Brand 3" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Louis Vuitton</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-4.png" alt="Brand 4" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Nike</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-5.png" alt="Brand 5" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Michael Kors</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-6.png" alt="Brand 6" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Pandora</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/brands/brand-7.png" alt="Brand 7" class="w-24" />
+        <p class="mt-2 text-sm font-bold">Puma</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section>
+    <h1 class="text-4xl pl-4 font-bold mt-5">We Provide Best </h1>
+    <h1 class="text-4xl pl-4 font-bold">Customer Experiences</h1>
+    <p class="font-sans text-right pr-6 text-2xl ">|| We ensure that our customer have the best shopping experience
+    </p>
+    <div class=" md:flex ">
+
+
+      <div class="bg-blue-100 text-center p-2 m-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-32 inline">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+
+
+
+        <h2 class="text-xl font-medium">Original Products</h2>
+        <p>Discover exclusive, high-quality products crafted to meet your needs. Shop the latest trends and timeless
+          essentials, all designed to offer premium value and unmatched.Elevate your shopping experience today!!</p>
+      </div>
+
+
+      <div class="bg-blue-100 text-center p-2 m-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-32 inline">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+        </svg>
+
+
+        </svg>
+
+
+        <h2 class="text-xl font-medium">Satisfaction Guarantee</h2>
+        <p>Enjoy a hassle-free shopping experience with our 100% Satisfaction Guarantee. If you're not completely happy
+          with your purchase, well make it right with easy returns or exchanges—no questions asked!</p>
+      </div>
+
+      <div class="bg-blue-100 text-center p-2 m-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-32 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+        <h2 class="text-xl font-medium">New Arrival Everyday</h2>
+        <p>Discover the latest trends with our New Arrivals, updated daily! Shop fresh styles and must-have products to
+          stay ahead of the curve. Don't miss out—explore what's new today!!</p>
+      </div>
+
+      <div class="bg-blue-100 text-center p-2 m-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-32 inline">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+        </svg>
+
+        <h2 class="text-xl font-medium">Fast & Free Shipping
+        </h2>
+        <p>Enjoy fast & free shipping on every order! Shop with confidence, knowing your products will arrive quickly
+          without any extra cost. Experience hassle-free delivery right to your doorstep.</p>
+      </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section id="new-arrivals" class="py-10 px-6 bg-secondary">
+    <h2 class="text-4xl font-bold text-left mb-6">New Arrivals</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Product Item -->
+      <div class="relative h-96 w-96 overflow-hidden  group">
+        <img src="images/poster/banner-1.jpg" alt="Product" class="object-cover w-full h-full" />
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <button
+          class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-2 rounded opacity-90 group-hover:scale-105 transition">
+          <a href="collections.html">Shop Now</a>
+        </button>
+      </div>
+
+      <div class="relative h-96 w-96 overflow-hidden  group">
+        <img src="images/poster/banner-2.jpg" alt="Product" class="object-cover w-full h-full" />
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <button
+          class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-2 rounded opacity-90 group-hover:scale-105 transition">
+          <a href="collections.html">Shop Now</a>
+        </button>
+      </div>
+
+      <div class="relative h-96 w-96 overflow-hidden  group">
+        <img src="images/poster/banner-3.jpg" alt="Product" class="object-cover w-full h-full" />
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <button
+          class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-2 rounded opacity-90 group-hover:scale-105 transition">
+          <a href="collections.html">Shop Now</a>
+        </button>
+      </div>
+
+      <div class="relative h-96 w-96 overflow-hidden  group">
+        <img src="images/poster/banner-4.jpg" alt="Product" class="object-cover w-full h-full" />
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <button
+          class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-2 rounded opacity-90 group-hover:scale-105 transition">
+          <a href="collections.html">Shop Now</a>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Most Wanted -->
+  <section id="most-wanted" class="py-10 px-6">
+    <h2 class="text-2xl font-bold text-center mb-6">Most Wanted</h2>
+
+    <div class="flex flex-nowrap cursor-pointer overflow-x-auto space-x-6 scroll-smooth hide-scrollbar py-2">
+      <!-- Product Card -->
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-1.png" class="w-full h-full object-cover rounded-lg" alt="dress 1" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-2.png" class="w-full h-full object-cover rounded-lg" alt="dress 2" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-3.png" class="w-full h-full object-cover rounded-lg" alt="dress 3" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-4.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 4" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-5.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 5" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-6.png" class="w-full h-full object-cover rounded-lg" alt="dress 6" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+        <img src="images/product/dress-1.png" class="w-full h-full object-cover rounded-lg" alt="dress 6" />
+        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
+        <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
+          <i class="far fa-heart"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Limited Offer -->
+  <section style="background-color: #1b1b1b;" class=" text-white py-10">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
+      <!-- Image -->
+      <div class="w-full md:w-1/2">
+        <img src="images/LO.jpg" alt="Limited Time Offer" class="w-full object-cover" />
+      </div>
+      <!-- Text -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h2 class="text-3xl font-bold">Limited Offer</h2>
+        <p class="mt-4 text-7xl font-bold">
+          35% OFF <br />For the first 30 customers
+        </p>
+        <button
+          class="mt-6 inline-flex items-center bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition">
+          <a href="collections.html">Shop Now</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join our Newsletter -->
+  <section class="p-4 text-center">
+    <h1 class="font-bold text-3xl mt-5 text-center">Join our News Letter</h1>
+    <p>Signup for our email newspaper to get exclusive discounts,updates and more</p>
+    <input type="text" class="border border-black mt-5 p-2 " style="width: 80%;"><br>
+    <button style="background-color: #1b1b1b;" class=" text-white hover:underline p-3 m-3">Subcribe</button>
+
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #1b1b1b;" class=" text-white py-12 px-6">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand & Copyright -->
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl font-bold">DK Cloths</h2>
+        <p class="mt-2 text-gray-300">Where Trends Are Born.</p>
+        <p class="mt-4 text-sm text-gray-400">
+          &copy; 2025 Dikshan V V . All rights reserved.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="text-center md:text-left">
+        <h3 class="font-semibold mb-2">Quick Links</h3>
+        <ul class="space-y-1 text-sm">
+          <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+          <li>
+            <a href="collections.html" class="hover:text-gray-300">Collections</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="text-center md:text-right">
+        <h3 class="font-semibold pr-20 mb-2">Follow Us</h3>
+        <div class="flex justify-center md:justify-end space-x-4 text-2xl">
+
+          <a href="https://www.instagram.com/_dikshan._/" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook.png" class="h-14 w-16">
+          </a>
+
+          <a href="https://www.linkedin.com/in/dikshan-v-v-9ba55925b/" target="_blank" rel="noopener noreferrer">
+            <img src="images/linked.png" class="h-14 w-16">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="index.js"></script>
+
+</body>
+
+</html>

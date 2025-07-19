@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – GEN Z</title>
+    <link rel="icon" type="image/x-icon" href="/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .bg-primary {
+        background-color: #0a1f44;
+      }
+      .text-primary {
+        color: #0a1f44;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+
+  <body>
+ 
+ <!-- Offer tab -->
+  <nav id="offerTab" style="background-color: #1b1b1b ;"
+    class=" p-1 top-0 flex justify-center items-center shadow-xl gap-20">
+    <h1 class="text-2xl text-white cursor-default">Sign Up and <b>GET 20% OFF</b> for your first Order</h1>
+    <h1 id="close" class="text-2xl text-white cursor-pointer font-bold ">X</h1>
+  </nav>
+
+
+  <!-- Responsive Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-50">
+    <h1 class="text-3xl font-extrabold cursor-pointer"><a href="index.html">DK Cloths</a></h1>
+
+    <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="w-6 h-6 md:hidden">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+
+
+    <ul class="flex gap-24 text-gray-600 hidden md:flex">
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="newarrival.html">New Arrival</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="mostwanted.html">Most Wanted</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- side Navbar -->
+  <section id="sidenav" class="bg-white fixed z-20 top-0 transition-all duration-1000"
+    style="width: 50%;height: 100vh;right: -50%;">
+    <div class="text-right p-5">
+      <p id="close-nav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col gap-10 items-center  text-gray-600 md:flex">
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="newarrival.html">New Arrival</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="mostwanted.html">Most Wanted</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a>
+      </li>
+      <li>
+        <a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+  </section>
+
+
+    <!-- Main Content -->
+    <section class="py-10 px-6">
+      <div class="container mx-auto flex flex-col md:flex-row gap-8">
+        <!-- Sidebar Filters -->
+        <aside class="w-full md:w-1/4">
+          <h3 class="text-lg font-semibold mb-4">Categories</h3>
+          <div class="flex flex-col space-y-2 mb-6">
+            <!-- Categories -->
+            <label class="inline-flex items-center">
+              <input
+                type="checkbox"
+                class="filter-cat h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                value="Resort Shirts"
+              />
+              <span class="ml-2">Resort Shirts</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input
+                type="checkbox"
+                class="filter-cat h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                value="Hoodies"
+              />
+              <span class="ml-2">Hoodies</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input
+                type="checkbox"
+                class="filter-cat h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                value="Top"
+              />
+              <span class="ml-2">Top</span>
+            </label>
+
+            <div class="pt-6 flex flex-col gap-1">
+              <h3 class="text-lg font-semibold mb-4">Genders</h3>
+
+              <!-- Genders -->
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="filter-gen h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  value="Male"
+                />
+                <span class="ml-2">Male</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="filter-gen h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  value="Female"
+                />
+                <span class="ml-2">Female</span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products & Search -->
+        <section class="w-full md:w-3/4 flex flex-col gap-6">
+          <!-- Search Box -->
+          <div>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search products..."
+              class="w-full border border-gray-300 rounded-lg p-2 focus:ring-primary focus:border-primary"
+            />
+          </div>
+
+          <!-- Products Grid -->
+          <div
+            id="product-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+          >
+            <!-- Product 1 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">  Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">  Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">  Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">  Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">  Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 6 -->
+<div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold"> Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold"> Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold"> Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 10 -->
+            <div class="bg-gray-50 h-96  overflow-hidden shadow-md">
+              <img
+                src="./images/product/dress-1.png"
+                alt="Shirt"
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold"> Shirt</h4>
+                <p class="text-primary font-bold">$79</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #1b1b1b;" class=" text-white py-12 px-6">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand & Copyright -->
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl font-bold">DK Cloths</h2>
+        <p class="mt-2 text-gray-300">Where Trends Are Born.</p>
+        <p class="mt-4 text-sm text-gray-400">
+          &copy; 2025 Dikshan V V . All rights reserved.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="text-center md:text-left">
+        <h3 class="font-semibold mb-2">Quick Links</h3>
+        <ul class="space-y-1 text-sm">
+          <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+          <li>
+            <a href="collections.html" class="hover:text-gray-300">Collections</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="text-center md:text-right">
+        <h3 class="font-semibold pr-20 mb-2">Follow Us</h3>
+        <div class="flex justify-center md:justify-end space-x-4 text-2xl">
+
+          <a href="https://www.instagram.com/_dikshan._/" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook.png" class="h-14 w-16">
+          </a>
+
+          <a href="https://www.linkedin.com/in/dikshan-v-v-9ba55925b/" target="_blank" rel="noopener noreferrer">
+            <img src="images/linked.png" class="h-14 w-16">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+   
+   <!-- JS -->
+    <script src="index.js"></script>
+  </body>
+</html>
