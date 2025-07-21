@@ -16,68 +16,59 @@
 </head>
 <body class="class="bg-gray-100 scroll-smooth">
 
-  <!-- Offer tab -->
-  <nav id="offerTab" style="background-color: #1b1b1b ;"
-    class=" p-1 top-0 flex justify-center items-center shadow-xl gap-20">
-    <h1 class="text-2xl text-white cursor-default">Sign Up and <b>GET 20% OFF</b> for your first Order</h1>
-    <h1 id="close" class="text-2xl text-white cursor-pointer font-bold ">X</h1>
-  </nav>
+  <!-- Offer Banner -->
+  <div id="offerBanner" class="bg-gray-800 text-white py-4 px-6 flex items-center justify-center relative">
+    <p class="text-lg sm:text-xl text-center">
+      Sign Up and <span class="font-bold text-white">GET 20% OFF</span> for your first Order
+    </p>
+    <button onclick="document.getElementById('offerBanner').style.display='none'"
+      class="absolute right-4 text-2xl top-1/2 -translate-y-1/2 hover:text-red-400 transition duration-200">
+      &times;
+    </button>
+  </div>
 
-   <!-- Responsive Navbar -->
-  <nav style="background-color: white;" class="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-50">
-    <h1 class="text-3xl font-extrabold cursor-pointer"><a href="index.html">DK Cloths</a></h1>
+<!-- Navbar -->
+<nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+    
+    <!-- Logo -->
+  <a href="index.html" class="text-3xl font-bold text-gray-800">Nostra</a>
 
-    <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-      stroke="currentColor" class="w-6 h-6 md:hidden">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    </svg>
-
-
-    <ul class="flex gap-24 text-gray-600 hidden md:flex">
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="#new-arrivals.html">New Arrival</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="#most-wanted.html">Most Wanted</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="images/product/collections.html">Collections</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- side Navbar -->
-  <section id="sidenav" class="bg-white fixed top-0 z-50 transition-all duration-1000"
-  style="width: 50%; height: 100vh; right:-100%;">
-    <div class="text-right p-5">
-      <p id="close-nav" class="inline cursor-pointer">X</p>
+    
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 text-base font-medium">
+      <a href="./index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+      <a href="#new-arrivals" class="text-gray-800 hover:text-blue-600">New Arrival</a>
+      <a href="#most-wanted" class="text-gray-800 hover:text-blue-600">Most Wanted</a>
+      <a href="./collections.html" class="text-gray-800 hover:text-blue-600">Collections</a>
+      <a href="./contactus.html" class="text-gray-800 hover:text-blue-600">Contact Us</a>
     </div>
-    <ul class="flex flex-col gap-10 items-center  text-gray-600 md:flex">
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="#new-arrivals.html">New Arrival</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="#mostwanted.html">Most Wanted</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="images/product/collections.html">Collections</a>
-      </li>
-      <li>
-        <a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a>
-      </li>
+
+    <!-- Mobile Icon -->
+    <div class="md:hidden">
+      <button onclick="toggleMobileMenu()">
+        <i class="fa-solid fa-bars text-2xl text-gray-800"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-white transform translate-x-full transition duration-300 z-50">
+    <div class="flex justify-between items-center p-4 border-b">
+      <div class="text-2xl font-bold text-gray-800">Nostra</div>
+      <button onclick="toggleMobileMenu()">
+        <i class="fa-solid fa-xmark text-3xl text-gray-800"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-6 p-6 text-lg font-medium text-gray-700">
+      <li><a href="./index.html" onclick="toggleMobileMenu()">Home</a></li>
+      <li><a href="#new-arrivals" onclick="toggleMobileMenu()">New Arrival</a></li>
+      <li><a href="#most-wanted" onclick="toggleMobileMenu()">Most Wanted</a></li>
+      <li><a href="./collections.html" onclick="toggleMobileMenu()">Collections</a></li>
+      <li><a href="./contactus.html" onclick="toggleMobileMenu()">Contact Us</a></li>
     </ul>
-
-  </section>
-
+  </div>
+</nav>
 
 <!-- Search Bar -->
 <div class="max-w-7xl mx-auto px-4 py-8">

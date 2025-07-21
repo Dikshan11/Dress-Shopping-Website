@@ -20,7 +20,7 @@
 
 
   <!-- Responsive Navbar -->
-  <nav class="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-50">
+  <nav style="background-color: white;" class="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-50">
     <h1 class="text-3xl font-extrabold cursor-pointer"><a href="index.html">DK Cloths</a></h1>
 
     <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -34,10 +34,10 @@
         <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
       </li>
       <li>
-        <a class="hover:underline font-semibold hover:text-black" href="index.html">New Arrival</a>
+        <a class="hover:underline font-semibold hover:text-black" href="#new-arrivals.html">New Arrival</a>
       </li>
       <li>
-        <a class="hover:underline font-semibold hover:text-black" href="index.html">Most Wanted</a>
+        <a class="hover:underline font-semibold hover:text-black" href="#most-wanted.html">Most Wanted</a>
       </li>
       <li>
         <a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a>
@@ -49,8 +49,8 @@
   </nav>
 
   <!-- side Navbar -->
-  <section id="sidenav" class="bg-white fixed z-20 top-0 transition-all duration-1000"
-    style="width: 50%;height: 100vh;right: -50%;">
+  <section id="sidenav" class="bg-white fixed top-0 z-50 transition-all duration-1000"
+  style="width: 50%; height: 100vh; right:-100%;">
     <div class="text-right p-5">
       <p id="close-nav" class="inline cursor-pointer">X</p>
     </div>
@@ -59,10 +59,10 @@
         <a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a>
       </li>
       <li>
-        <a class="hover:underline font-semibold hover:text-black" href="newarrival.html">New Arrival</a>
+        <a class="hover:underline font-semibold hover:text-black" href="#new-arrivals.html">New Arrival</a>
       </li>
       <li>
-        <a class="hover:underline font-semibold hover:text-black" href="mostwanted.html">Most Wanted</a>
+        <a class="hover:underline font-semibold hover:text-black" href="#mostwanted.html">Most Wanted</a>
       </li>
       <li>
         <a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a>
@@ -74,8 +74,8 @@
 
   </section>
 
-  <!-- Header Section -->
-  <section class="px-6">
+ <!-- Header Section-->
+ <section class="px-6">
     <div class="h-96 mx-auto border rounded overflow-hidden relative">
       <div id="slider-images" class="flex transition-all duration-500 h-full">
         <img src="images/poster/banner-2.jpg" class="w-1/2 h-full object-cover opacity-60" />
@@ -92,7 +92,7 @@
           Level Up Your Style
         </h1>
         <h2 class="text-lg sm:text-xl mt-2">With Our Summer Collection</h2>
-        <button class="mt-4 px-5 py-2 flex justify-center gap-5 bg-white text-black rounded text-sm sm:text-base">
+        <a href="collections.html"><button class="mt-4 px-5 py-2 flex justify-center gap-5 bg-white text-black rounded text-sm sm:text-base">
           Shop Now <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
             class=" w-5 h-5 top-10">
             <path fill-rule="evenodd"
@@ -100,7 +100,7 @@
               clip-rule="evenodd" />
           </svg>
 
-        </button>
+        </button></a>
       </div>
       <button id="slide-left" class="absolute top-1/2 left-3 z-20 transform -translate-y-1/2">
         <img src="images/left-arrow.png" alt="Left" class="w-10 h-10 sm:w-8 sm:h-8" />
@@ -121,11 +121,11 @@
       </div>
       <div class="flex flex-col items-center">
         <img src="images/brands/brand-2.png" alt="Brand 2" class="w-24" />
-        <p class="mt-2 text-sm font-bold">Calvin Klein</p>
+        <p class="mt-2 text-sm font-bold">Puma</p>
       </div>
       <div class="flex flex-col items-center">
         <img src="images/brands/brand-3.png" alt="Brand 3" class="w-24" />
-        <p class="mt-2 text-sm font-bold">Louis Vuitton</p>
+        <p class="mt-2 text-sm font-bold">Leaves</p>
       </div>
       <div class="flex flex-col items-center">
         <img src="images/brands/brand-4.png" alt="Brand 4" class="w-24" />
@@ -133,15 +133,7 @@
       </div>
       <div class="flex flex-col items-center">
         <img src="images/brands/brand-5.png" alt="Brand 5" class="w-24" />
-        <p class="mt-2 text-sm font-bold">Michael Kors</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="images/brands/brand-6.png" alt="Brand 6" class="w-24" />
-        <p class="mt-2 text-sm font-bold">Pandora</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="images/brands/brand-7.png" alt="Brand 7" class="w-24" />
-        <p class="mt-2 text-sm font-bold">Puma</p>
+        <p class="mt-2 text-sm font-bold">Behance</p>
       </div>
     </div>
   </section>
@@ -212,8 +204,8 @@
   </section>
 
   <!-- New Arrivals -->
-  <section id="new-arrivals" class="py-10 px-6 bg-secondary">
-    <h2 class="text-4xl font-bold text-left mb-6">New Arrivals</h2>
+  <section id="new-arrivals" class="py-16 px-4 bg-white">
+    <h2 class="text-4xl font-bold text-left mb-8">New Arrivals</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       <!-- Product Item -->
       <div class="relative h-96 w-96 overflow-hidden  group">
@@ -262,7 +254,7 @@
     <div class="flex flex-nowrap cursor-pointer overflow-x-auto space-x-6 scroll-smooth hide-scrollbar py-2">
       <!-- Product Card -->
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-1.png" class="w-full h-full object-cover rounded-lg" alt="dress 1" />
+        <img src="images/product/d1.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 1" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
@@ -270,7 +262,7 @@
       </div>
 
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-2.png" class="w-full h-full object-cover rounded-lg" alt="dress 2" />
+        <img src="images/product/d2.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 2" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
@@ -278,7 +270,7 @@
       </div>
 
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-3.png" class="w-full h-full object-cover rounded-lg" alt="dress 3" />
+        <img src="images/product/d4.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 3" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
@@ -286,7 +278,7 @@
       </div>
 
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-4.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 4" />
+        <img src="images/product/d3.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 4" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
@@ -294,7 +286,7 @@
       </div>
 
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-5.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 5" />
+        <img src="images/product/d7.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 5" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
@@ -302,7 +294,7 @@
       </div>
 
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-6.png" class="w-full h-full object-cover rounded-lg" alt="dress 6" />
+        <img src="images/product/d6.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 6" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
@@ -310,7 +302,7 @@
       </div>
 
       <div class="flex-shrink-0 w-64 h-80 relative snap-start">
-        <img src="images/product/dress-1.png" class="w-full h-full object-cover rounded-lg" alt="dress 6" />
+        <img src="images/product/d5.jpg" class="w-full h-full object-cover rounded-lg" alt="dress 6" />
         <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">SALE</span>
         <button class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none">
           <i class="far fa-heart"></i>
